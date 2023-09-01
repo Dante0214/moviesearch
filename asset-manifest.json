@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dante0214.github.io/moviesearch/static/css/main.94cba5e1.css",
+    "main.js": "/dante0214.github.io/moviesearch/static/js/main.4f42bbc5.js",
+    "static/js/787.a19c38e9.chunk.js": "/dante0214.github.io/moviesearch/static/js/787.a19c38e9.chunk.js",
+    "index.html": "/dante0214.github.io/moviesearch/index.html",
+    "main.94cba5e1.css.map": "/dante0214.github.io/moviesearch/static/css/main.94cba5e1.css.map",
+    "main.4f42bbc5.js.map": "/dante0214.github.io/moviesearch/static/js/main.4f42bbc5.js.map",
+    "787.a19c38e9.chunk.js.map": "/dante0214.github.io/moviesearch/static/js/787.a19c38e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94cba5e1.css",
+    "static/js/main.4f42bbc5.js"
+  ]
+}

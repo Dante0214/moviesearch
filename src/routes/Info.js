@@ -38,7 +38,7 @@ function Info() {
         <div>
           <div className={style.backhome}>
             <h1>{data.title}</h1>
-            <Link to="/">돌아가기</Link>
+            <Link to="/moviesearch">돌아가기</Link>
           </div>
           <h2>개요</h2>
           <h3>{data.overview}</h3>

@@ -84,7 +84,7 @@ function Home() {
         {searchTrigger ? <button onClick={handleState}>돌아가기</button> : ""}
       </div>
 
-      <h1 className={style.trend}>Weekly Trends</h1>
+      {searchTrigger ? "" : <h1 className={style.trend}>Weekly Trends</h1>}
 
       <div className={style.movie}>
         {(searchTrigger ? searchData : data).map((mov) => (
@@ -103,57 +103,3 @@ function Home() {
 }
 
 export default Home;
-
-// import React, { useState, useEffect } from "react";
-
-// function App() {
-//   const [data, setData] = useState([]); // 빈 배열로 초기화합니다.
-//   const [search, setSerch] = useState("");
-//   const onChange = (e) => setSerch(e.target.value);
-
-//   useEffect(() => {
-//     const options = {
-//       method: "GET",
-//       headers: {
-//         accept: "application/json",
-//         Authorization:
-//           "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzODJiNTU4ZGFkMDIxZjcwNzdiNjM1OWZkZTY5NWI2ZSIsInN1YiI6IjY0ZjAzOTRhM2E5OTM3MDBjNWMzZGNmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dJzN3Vy9PLwLFig4rNqofJnb6p5i07nCdSteQG22Roc",
-//       },
-//     };
-
-//     fetch(
-//       "https://api.themoviedb.org/3/trending/all/week?language=en-US",
-//       options
-//     )
-//       .then((response) => response.json())
-//       .then((data) => {
-//         setData(data.results); // 받아온 제목 데이터를 상태로 설정합니다.
-//         console.log(data);
-//       })
-//       .catch((err) => console.error(err));
-//   }, []); // 빈 배열을 넣어 처음 렌더링 시에만 실행되도록 설정합니다.
-
-//   return (
-//     <div>
-//       <h1>Trending Titles</h1>
-//       <hr />
-//       <div>
-//         <input onChange={onChange} type="text" value={search} />
-//         <button>search</button>
-//       </div>
-//       <ul>
-//         {data.map((item, index) => (
-//           <div key={index}>
-//             <h2>{item.title || item.name}</h2>
-//             <img
-//               src={`https://image.tmdb.org/t/p/w154${item.poster_path}`}
-//               alt={item.title}
-//             />
-//           </div>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Movie from "../components/Movie";
-import "../routes/Home.css";
+import style from "../routes/Home.module.css";
 // import { Link } from "react-router-dom";
 
 function Home() {
@@ -70,24 +70,23 @@ function Home() {
 
   return (
     <div>
-      <h1>Trending Titles and Images</h1>
-      <div>
-        <label>
-          검색
-          <input
-            type="text"
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyPress={handleKeyPress}
-          />
-        </label>
-
+      <div className={style.search}>
+        <input
+          className={style.input}
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyPress={handleKeyPress}
+        />
         <button onClick={handleSearch}>Search</button>
-      </div>
-      {searchTrigger ? <button onClick={handleState}>돌아가기</button> : ""}
 
-      <div className="movie">
+        {searchTrigger ? <button onClick={handleState}>돌아가기</button> : ""}
+      </div>
+
+      <h1 className={style.trend}>Weekly Trends</h1>
+
+      <div className={style.movie}>
         {(searchTrigger ? searchData : data).map((mov) => (
           <Movie
             id={mov.id}

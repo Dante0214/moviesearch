@@ -38,5 +38,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://dante0214.github.io/practice"
+  "homepage": "dante0214.github.io/moviesearch",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
 }

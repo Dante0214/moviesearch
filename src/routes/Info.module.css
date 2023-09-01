@@ -1,0 +1,11 @@
+.total {
+  display: flex;
+  flex-direction: row;
+}
+.element {
+  margin: 10px;
+}
+.backhome {
+  display: flex;
+  justify-content: space-between;
+}

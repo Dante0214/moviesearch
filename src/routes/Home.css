@@ -1,0 +1,7 @@
+.movie {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 100px;
+  /* background-color: red; */
+  padding: 10px 10px;
+}

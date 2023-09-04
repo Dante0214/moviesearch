@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Movie from "../components/Movie";
 import style from "../routes/Home.module.css";
+
 // import { Link } from "react-router-dom";
+
+const apikey = process.env.REACT_APP_API_KEY;
 
 function Home() {
   const [data, setData] = useState([]); //기본 화면을 위한 상태
@@ -14,8 +17,7 @@ function Home() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzODJiNTU4ZGFkMDIxZjcwNzdiNjM1OWZkZTY5NWI2ZSIsInN1YiI6IjY0ZjAzOTRhM2E5OTM3MDBjNWMzZGNmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dJzN3Vy9PLwLFig4rNqofJnb6p5i07nCdSteQG22Roc",
+        Authorization: apikey,
       },
     };
 
@@ -36,8 +38,7 @@ function Home() {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzODJiNTU4ZGFkMDIxZjcwNzdiNjM1OWZkZTY5NWI2ZSIsInN1YiI6IjY0ZjAzOTRhM2E5OTM3MDBjNWMzZGNmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dJzN3Vy9PLwLFig4rNqofJnb6p5i07nCdSteQG22Roc",
+          Authorization: apikey,
         },
       };
 

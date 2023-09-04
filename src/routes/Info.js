@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import style from "../routes/Info.module.css";
+
+const apikey = process.env.REACT_APP_API_KEY;
+
 function Info() {
   const { id } = useParams();
   const [data, setData] = useState("");
@@ -11,8 +14,7 @@ function Info() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzODJiNTU4ZGFkMDIxZjcwNzdiNjM1OWZkZTY5NWI2ZSIsInN1YiI6IjY0ZjAzOTRhM2E5OTM3MDBjNWMzZGNmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dJzN3Vy9PLwLFig4rNqofJnb6p5i07nCdSteQG22Roc",
+        Authorization: apikey,
       },
     };
 
